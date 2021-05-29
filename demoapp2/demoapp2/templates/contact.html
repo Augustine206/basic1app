@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<h1>Contact page</h1>
+
+<form id='contactform' name="sentmessage"  novalidate="novalidate">
+<div class="control-goup">
+	<div class="form-group" floating-label-group controls mt=0 pb-2>
+		<label>Name</label>
+		<input class="form-control" id="name" type="text" placeholder="Name" required></input>
+		<p class="help-block text-danger"></p>
+	</div>
+</div>
+
+<div class="control-goup">
+	<div class="form-group" floating-label-group controls mt=0 pb-2>
+		<label>Email Address</label>
+		<input class="form-control" id="email" type="email"placeholder="Email Address" required="required"></input>
+		<p class="help-block text-danger"></p>
+	</div>
+</div>
+
+<div class="control-goup">
+	<div class="form-group" floating-label-group controls mt=0 pb-2>
+		<label>Message</label>
+		<textarea class="form-control" id="message" rows="5" placeholder="Message" required="required"></textarea>
+		<p class="help-block text-danger"></p>
+	</div>
+</div>
+<br/>
+<div id="success"></div>
+<div class="form-group"><button class="btn " id="sendMessageButton"
+	type="submit">Send</button>
+</div>
+</form>
+{% endblock %}
